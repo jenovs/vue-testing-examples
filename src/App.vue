@@ -2,17 +2,25 @@
   <div id="app">
     <HelloWorld />
     <Input />
+    <Form @submit="handleSubmit" />
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue';
 import Input from './components/Input.vue';
+import Form from './components/Form.vue';
 
 export default {
   components: {
     HelloWorld,
-    Input
+    Input,
+    Form
+  },
+  methods: {
+    handleSubmit(name, password) {
+      console.log(name, password);
+    }
   }
 };
 </script>
